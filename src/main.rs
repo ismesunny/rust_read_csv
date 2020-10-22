@@ -5,7 +5,7 @@ fn main() -> Result<(), csv::Error> {
     for result in rdr.deserialize() {
         let record: HashMap<String, String> = result?;
         println!(
-            "msgid: {:?}", record["msgid"],
+            "msgid: {:?}", record["name_coloum"],
         );
     }
     Ok(())
